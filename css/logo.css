@@ -1,0 +1,25 @@
+
+.coin-images{
+position:relative;
+}
+.coin-images .coin-src{
+display:none;
+}
+.coin-slider{
+width:100%;height:100%;}
+#welcome-background{
+    position:absolute;
+	top:0;right:0;bottom:0;left:0;
+	z-index:-1;}
+#games{
+	width:100%;height:100%;
+	display:flex;
+	flex-wrap:wrap;
+	/*note this only for first frame*/
+	background-image: url('../img/welcome1.jpg');
+	background-position: 50% 50%;
+	background-size: cover;
+				}
+.cs-games{
+	flex-grow:1;
+}

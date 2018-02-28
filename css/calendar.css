@@ -1,0 +1,13 @@
+.calendar {display:flex; flex-wrap:wrap; list-style-type:none; padding:10px;margin-bottom:1rem;}
+.calendar .day {border: solid 1px #333333; padding:10px 0; text-align:center;}
+.calendar .day strong {font-size:16px; font-weight:700;}
+.calendar .day {color:#333333;}
+.calendar .day.today {font-weight:700;color:#fff;background-color:#333333;}
+.calendar .day.today {font-weight:700;color:#fff;background-color:#333333;}
+@media (min-width: 768px) {
+.calendar .day {flex:1;}
+}
+@media (max-width: 767px) {
+.calendar {justify-content:center;}
+}
+.calendar-header {font-size: 3rem;margin-bottom:2rem;}

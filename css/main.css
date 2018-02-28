@@ -1,0 +1,320 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url(https://fonts.googleapis.com/css?family=Aguafina+Script:400,700);
+ body{
+	font-family: 'Roboto Slab', serif;
+	color:#333333;
+	background-color:#FDFDFA;
+ }
+/*
+bootstrap bug applying anything with -order. ex: order-sm-first
+not precendence issues: chrome doesn't see rule
+*/
+.me-sm-first {
+	-webkit-box-ordinal-group: 0;
+	-ms-flex-order: -1;
+	order: -1;
+}
+.me-sm-last {
+	-webkit-box-ordinal-group: 14;
+	-ms-flex-order: 13;
+	order: 13;
+}
+@media (min-width: 768px) {
+	.me-md-first {
+		-webkit-box-ordinal-group: 0;
+		-ms-flex-order: -1;
+		order: -1;
+	}
+	.me-md-last {
+		-webkit-box-ordinal-group: 14;
+		-ms-flex-order: 13;
+		order: 13;
+	}
+}
+/*shared*/
+ .banner{
+	position:relative;
+}
+.bg-overlay{
+	background-color: black;
+	opacity: .6;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.bg-banner{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.img-constrained{
+	max-width:100%;
+	max-height:100%;
+}
+.card{
+	background:none;
+	border:none;
+}
+.fa{
+font-size:5rem;
+text-align: center;
+}
+@media (max-width: 767px) {
+.fa{
+	color:white;
+}
+}
+/* navbar */
+#mainNav{
+	background:#343a40;
+}
+#mainNav .nav-link {
+    color: white;
+	font-size:1.2rem;
+}
+@media (max-width: 767px) {
+	.navbar-logo{
+		display:block;
+		font-size:2.5rem;
+		color: rgba(255,255,255,.5);
+		padding:2.5px;
+	}
+}
+@media (min-width: 768px) {
+	.navbar-logo{
+		display:none;
+	}
+	#mainNav.topped{
+		background:none;
+		background-color:none;
+	}
+ }
+
+/*1. welcome banner1 */
+#banner1{
+	padding-top: 10rem;
+	padding-bottom: 9rem;
+}
+.welcome-item {
+	color:white;
+	display:block;
+}
+.welcome-logo{
+	height:7rem;
+	margin-bottom:1rem;
+}
+.welcome-title{
+	font-size:4rem;
+	font-family:Aguafina Script;
+}
+.welcome-title-plain{
+	font-size:2.5rem;
+	margin-bottom:1rem;
+}
+.welcome-address{
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+.spacer::before{
+	content:"\0020\2022\0020";
+}
+.welcome-description{
+	font-size:1.5rem;
+	margin-bottom: 2rem;
+}
+
+.welcome-btn{
+	margin: .4rem .8rem;
+	padding: 1rem 3rem;
+	color:white;
+	border-color: white;
+	font-weight:bold;
+	border-radius: 3px;
+	min-width:12rem;
+}
+.welcome-btn,
+.welcome-btn:active,
+.welcome-btn.active {
+	background: none;
+	color: white;
+	border-color: white;
+}
+.welcome-btn:hover,
+.welcome-btn:focus,
+.welcome-btn.focus {
+	color: #333333;
+	background-color: white;
+}
+@media (max-width: 768px) {
+	#banner1{
+		padding-top: 8rem;
+		padding-bottom: 5rem;
+	}
+	.welcome-logo{
+		font-size:5rem;
+	}
+
+	.welcome-address{
+		font-size: 1.5rem;
+	}
+	.spacer{
+		display: block;
+		margin-bottom:1rem;
+	}
+	.spacer::before{
+		content:'';
+	}
+	.welcome-description{
+		font-size:1rem;
+	}
+}
+/*2. content */
+#hours{
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	}
+@media (max-width: 767px) {
+	#hours{
+	padding-top: 3rem;
+	padding-bottom: 3rem;}
+}
+/*3. 
+	sm: banner overlaid content
+	md: banner top-content bottom 
+	*/
+#services{
+	background-image: url(../img/services.jpg);
+}
+#services .card{
+	text-decoration:none;}
+#services .card-img, #services .card-title,#services .card-text{
+	color: #333333;
+}
+@media (max-width: 767px) {
+	#services{
+	padding-top: 5rem;
+	padding-bottom: 3rem;
+		}
+	#services .card-img, #services .card-title,#services .card-text{
+		color: white;
+	}
+}
+@media (min-width: 768px) {
+	#services{
+		padding-top: 20rem;
+		margin-bottom:20rem;
+	}
+	#services .main-container{
+		position:absolute;
+		top:25rem;
+	}
+}
+
+/*4. 
+	sm: img top-content bottom 
+	md: img left-content right 
+	*/
+#maitenance{
+	padding-top: 2rem;
+}
+#maitenance .cards-heading{
+	margin-top: 1rem;
+}
+@media (min-width: 768px) {
+	#maitenance{
+		padding-bottom: 2rem;
+	}
+}
+
+/*5. 
+	sm: img top-content bottom 
+	md: content left-img right 
+	*/
+#repair{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+#repair .cards-heading{
+	margin-top: 1rem;
+}
+/*6. 
+	sm: banner overlaid content
+	md: banner top-content bottom 
+	*/
+#paint{
+	background-image: url(../img/paint.jpg);
+}
+#paint .card{
+	text-decoration:none;}
+#paint .card-img, #paint .card-title,#paint .card-text{
+	color: #333333;
+}
+@media (max-width: 767px) {
+	#paint{
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+	#paint .card-img, #paint .card-title,#paint .card-text{
+		color: white;
+	}
+}
+@media (min-width: 768px) {
+	#paint{
+		padding-top: 20rem;
+		margin-bottom:15rem;
+	}
+	#paint .main-container{
+		position:absolute;
+		top:25rem;
+	}
+}
+
+/*6b. before and after photos*/
+@media (max-width: 768px) {
+	#beforeAfter{
+		padding-top: 2rem;
+	}
+}
+/*7. map*/
+#map {
+	margin-top: 5rem;
+}@media (max-width: 768px) {
+	#map{
+		margin-top: 2rem;
+	}
+}
+#map .map-container{
+	height: 25rem;
+	position: relative;
+	background-image: url(../img/map.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#map iframe {
+  height: 100%;
+  width: 100%;
+}
+.map-title{    padding: 1rem;color: white;
+font-size: 2rem;}
+/*8. content*/
+#contact {
+	padding-top: 2rem;
+	border-bottom: solid 1px white;
+}
+#contact .card{
+	color: white;
+}
+#footer{
+	padding-top: 2rem;
+    padding-bottom: 2rem;
+	color:white;
+	font-size:1rem;
+}
