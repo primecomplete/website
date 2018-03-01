@@ -98,7 +98,7 @@ text-align: center;
  }
 
 /*1. welcome banner1 */
-#banner1{
+#welcome{
 	padding-top: 10rem;
 	padding-bottom: 9rem;
 }
@@ -153,7 +153,7 @@ text-align: center;
 	background-color: white;
 }
 @media (max-width: 768px) {
-	#banner1{
+	#welcome{
 		padding-top: 8rem;
 		padding-bottom: 5rem;
 	}
